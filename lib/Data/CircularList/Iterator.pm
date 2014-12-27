@@ -15,11 +15,11 @@ Data::CircularList::Iterator - iterator for Data::CircularList's object.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -107,13 +107,7 @@ sub next {
     return $self->p->data;
 }
 
-=head2 DESTROY
-
-destructor.
-Don't you need to use this method directory.
-
-=cut
-
+# free memory of cicular data
 sub DESTROY {
     my $self = shift;
     delete $self->{'header'};
